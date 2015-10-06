@@ -1,5 +1,7 @@
 // a closure is a function which carries with it references to the environment in which it was defined
 
+println("test 1")
+
 def fun1():Int => Int = {
 	val y = 1
 	def add(x: Int) = x + y
@@ -19,8 +21,21 @@ def fun2() = {
 fun2()
 
 
-////
+//// with anonymous functions
+println("test 2")
 
+def fun10(y: Int): Int => Int =
+	x => x + y
+
+def fun20() = {
+	val f = fun10(10)
+	println(f(2))
+}
+
+fun20()
+
+////
+println("test 3")
 
 def fun3(x: Int):Int => Int = {
 	val y = x
@@ -35,13 +50,3 @@ println(f(10))
 val g = fun3(2)
 println(g(10))
 println(f(10)) // the closure is defined when it was created
-
-
-
-
-
-
-
-
-
-
