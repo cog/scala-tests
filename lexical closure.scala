@@ -17,3 +17,31 @@ def fun2() = {
 }
 
 fun2()
+
+
+////
+
+
+def fun3(x: Int):Int => Int = {
+	val y = x
+	def add(c: Int) = c + y
+	
+	add
+}
+
+val f = fun3(1)
+println(f(10))
+
+val g = fun3(2)
+println(g(10))
+println(f(10)) // the closure is defined when it was created
+
+
+
+
+
+
+
+
+
+
