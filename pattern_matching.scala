@@ -10,6 +10,7 @@ println(fun(List(1, 10, 20)))
 def fun2(a: List[Int]) = a match {
 	case List(0, p, q) => p + q
 	case List() => -1
+	case _ => -1
 }
 
 def length(a: List[Int]):Int = a match {

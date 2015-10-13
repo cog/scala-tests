@@ -15,6 +15,7 @@ val b:Shape = Rectangle(10, 20)
 def area(a: Shape) = a match {
 	case Circle(r) => 3.14 * r * r
 	case Rectangle(h, w) => h * w
+	case _ => 0
 }
 
 ///////////////////////////////////////
