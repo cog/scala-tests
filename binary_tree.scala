@@ -12,6 +12,7 @@ println(c)
 def sumTree(t: Tree): Int = t match {
 	case Leaf(value) => value
 	case Node(value, left, right) => value + sumTree(left) + sumTree(right)
+	case _ => 0
 }
 
 println(sumTree(c))
